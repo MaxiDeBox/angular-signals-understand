@@ -1,0 +1,12 @@
+<div>
+  <h3 class="heading">API Types - Key Chart</h3>
+  <div class="container">
+    <div
+      *ngFor="let type of mockTypes"
+      [style.background-color]="type.color"
+      class="type-background"
+    >
+      {{ type.name }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+/* Add application styles & imports to this file! */
+:root {
+  --container-height: 250px;
+  --container-width: 800px;
+  --pod-height: 125px;
+  --pod-width: 125px;
+  --color-primary: #6e6e6e;
+  --border-radius: 8px;
+  --font-description-size: 10px;
+  --font-type-size: 64px;
+  --font-color: #ffffff;
+  --dialog-height: 500px;
+  --dialog-width: 300px;
+  --shape-gap: 10px;
+}

@@ -1,0 +1,60 @@
+<app-api-types></app-api-types>
+
+<div class="container">
+  <div class="shape element-type" [style.background-color]="color()">
+    <div>{{ elementType() }}</div>
+  </div>
+
+  <div>
+    <div>{{ title() }}</div>
+    <div>{{ description() }}</div>
+    <div>{{ url() }}</div>
+    <button mat-button (click)="loadDetails(url())">API Docs</button>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<span>APIs</span>
+<ng-container *ngFor="let api of mockData">
+  <div
+    class="shape panel element-type"
+    [style.background-color]="api.color"
+    (click)="loadDetails(url())"
+    (mouseenter)="mouseEnter(api)"
+  >
+    <div>
+      <div class="element-type">{{ api.elementType }}</div>
+    </div>
+    <div>
+      <div class="description">{{ api.title }}</div>
+    </div>
+  </div>
+</ng-container>
+
+<!-- <div class="container" [style.background-color]="color()">
+  <div class="top">
+    <div class="element-type">{{ elementType() }}</div>
+  </div>
+  <div class="bottom">
+    <div class="description">{{ title() }}</div>
+  </div>
+  <div class="bottom">
+    <div class="description">{{ description() }}</div>
+  </div>
+</div>
+<ng-container *ngFor="let api of mockData">
+  <div
+    class="shape panel"
+    [style.background-color]="api.color"
+    (click)="displayPanel(api)"
+    (mouseenter)="mouseEnter(api)"
+  >
+    <div class="top">
+      <div class="element-type">{{ api.elementType }}</div>
+    </div>
+    <div class="bottom">
+      <div class="description">{{ api.title }}</div>
+    </div>
+  </div>
+</ng-container> -->
